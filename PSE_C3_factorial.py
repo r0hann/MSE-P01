@@ -1,8 +1,10 @@
 def factorialOfValue(x):
     fact = 1
-    print("x", x)
+    if x < 0:
+        return 1
     for i in range(1, x+1):
-        fact = fact * i
+        fact *= i
     return fact
-factValue = factorialOfValue(4)
-print("Factorial value of 4 is ", factValue)
+value = int(input("Enter the value for factorial: "))
+factValue = factorialOfValue(value)
+print("Factorial value is ", factValue)
